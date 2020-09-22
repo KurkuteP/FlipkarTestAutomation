@@ -22,7 +22,11 @@ import org.openqa.selenium.support.ui.Select;
 			driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			driver.get("https:\\www.flipkart.com/");
-			driver.findElement(By.xpath("//*[@class='_2AkmmA _29YdH8']")).click();
+			driver.findElement(By.xpath("//*[@class='_2zrpKA _1dBPDZ']")).sendKeys("Prerna@gmail.com");
+			driver.findElement(By.xpath("//*[@type='password']")).sendKeys("Prerna");
+			driver.findElement(By.xpath("//*[@class='_2AkmmA _1LctnI _7UHT_c']")).click();
+		    Thread.sleep(2000);
+	        driver.findElement(By.xpath("//*[@class='_2AkmmA _29YdH8']")).click();
 			System.out.println(driver.getCurrentUrl());
 	        
 	    }
@@ -46,6 +50,8 @@ import org.openqa.selenium.support.ui.Select;
 	        WebElement Max=driver.findElement(By.xpath("//div[@class='_1YoBfV']/select"));
 	        Select M2=new Select(Max);
 	        M2.selectByValue("50000");
+	        Thread.sleep(2000);
+	        driver.quit();
 
 	    }
 
